@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  server_selection.conf: "root /usr/share/nginx/html/server_selection;\n\nserver {\n\tlisten
+    80;\n\tserver_name www.example.*;\n\tindex index_trailing_wildcard.html;\n}\n\nserver
+    {\n\tlisten 80;\n\tserver_name *.example.com;\n\tindex index_leading_wildcard.html;\n}\n\nserver
+    {\n\tlisten 80;\n\tserver_name host1.example.com;\n\tindex index_exact.html;\n}\n\nserver
+    {\n\tlisten 80;\n\tserver_name ~^(www|host1).*\\.example\\.org$;\n\tindex index_regex1.html;\n}\n\nserver
+    {\n\tlisten 80;\n\tserver_name ~^(subdomain|set|www|host1).*\\.example\\.org$;\n\tindex
+    index_regex2.html;\n}\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: nginxconf
