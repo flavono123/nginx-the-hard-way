@@ -13,4 +13,4 @@ data:
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: nginxhtml
+  name: serverselectionhtmls

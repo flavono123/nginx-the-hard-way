@@ -20,15 +20,15 @@ spec:
         volumeMounts:
         - name: nginxconf
           mountPath: /etc/nginx/conf.d
-        - name: nginxhtml
+        - name: serverselectionhtmls
           mountPath: /usr/share/nginx/html/server_selection
       volumes:
       - name: nginxconf
         configMap:
           name: nginxconf
-      - name: nginxhtml
+      - name: serverselectionhtmls
         configMap:
-          name: nginxhtml
+          name: serverselectionhtmls
 ---
 apiVersion: v1
 kind: Service
