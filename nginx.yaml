@@ -22,6 +22,8 @@ spec:
           mountPath: /etc/nginx/conf.d
         - name: serverselectionhtmls
           mountPath: /usr/share/nginx/html/server_selection
+        - name: jumphtmls
+          mountPath: /usr/share/nginx/html/jump
       volumes:
       - name: nginxconf
         configMap:
@@ -29,6 +31,9 @@ spec:
       - name: serverselectionhtmls
         configMap:
           name: serverselectionhtmls
+      - name: jumphtmls
+        configMap:
+          name: jumphtmls
 ---
 apiVersion: v1
 kind: Service
