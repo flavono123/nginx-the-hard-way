@@ -38,6 +38,13 @@ spec:
       - name: jumphtmls
         configMap:
           name: jumphtmls
+          items:
+          - key: index.html
+            path: index.html
+          - key: index_fallback.html
+            path: fallback/index.html
+          - key: index_another_fallback.html
+            path: another/fallback/index.html
 ---
 apiVersion: v1
 kind: Service
