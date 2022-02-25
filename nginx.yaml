@@ -45,6 +45,10 @@ spec:
             path: fallback/index.html
           - key: index_another_fallback.html
             path: another/fallback/index.html
+          - key: whoops.html
+            path: fallback/whoops.html
+          - key: another_whoops.html
+            path: another/fallback/index.html
 ---
 apiVersion: v1
 kind: Service

@@ -33,6 +33,11 @@ $ curl -H "Host: jump.com" 192.168.x.x:30080/blahblah
 $ curl -H "Host: jump.com" 192.168.x.x:30080/rewriteme/blah
 $ curl -H "Host: jump.com" 192.168.64.2:30080/rewriteme/index
 ...
+
+# 3. Never fallback to /usr/share/nginx/html/jump/fallback/whoops.html
+# error_page cause internal redirect
+# curl -H "Host: jump.com" <expose.service.ip>:30080/not_exists_file
+$ curl -H "Host: jump.com" 192.168.x.x:30080/blahblah
 ```
 
 ## Ref

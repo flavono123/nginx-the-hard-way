@@ -1,11 +1,15 @@
 apiVersion: v1
 data:
+  another_whoops.html: |
+    another whoops!
   index.html: |
     not jumped
   index_another_fallback.html: |
     another one(fallback)
   index_fallback.html: |
     fallback here
+  whoops.html: |
+    whoops..
 kind: ConfigMap
 metadata:
   creationTimestamp: null
