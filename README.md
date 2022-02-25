@@ -21,9 +21,18 @@ $ curl -H "Host: subdomain.example.com" 192.168.x.x:30080
 
 ### Jump location block
 ```sh
+# curl -H "Host: jump.com" <expose.service.ip>:30080
+
 # 1. Never fallback to /usr/share/nginx/html/jump/fallback/index.html
-# curl -H "Host: jump.com" <expose.service.ip>:30080/<not_exist_file>
+# curl -H "Host: jump.com" <expose.service.ip>:30080/not_exists_file
 $ curl -H "Host: jump.com" 192.168.x.x:30080/blahblah
+...
+
+# 2. rewrite ... last makes jump
+# curl -H "Host: jump.com" 192.168.x.x:30080/rewriteme/<exist_or_not>
+$ curl -H "Host: jump.com" 192.168.x.x:30080/rewriteme/blah
+$ curl -H "Host: jump.com" 192.168.64.2:30080/rewriteme/index
+...
 ```
 
 ## Ref
