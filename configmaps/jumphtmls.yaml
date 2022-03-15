@@ -8,9 +8,12 @@ data:
     another one(fallback)
   index_fallback.html: |
     fallback here
+  test.html: |
+    test
   whoops.html: |
     whoops..
 kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: jumphtmls
+  namespace: nginx
