@@ -7,7 +7,7 @@
 - or `kubectl rollout restart deploy nginx` to update configmaps
 
 ## Labs
-- branches here ...
+- jump
 
 ## Ref
 - https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts
