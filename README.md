@@ -7,9 +7,11 @@
 - or `kubectl rollout restart deploy nginx` to update configmaps
 
 ## Labs
-- branches here ...
+- index(wip)
+- try_files: `curl -H "Host: jump.com" 192.168.64.2:30080/blahblah` (remove `error_page` directive)
+- rewrite(wip)
+- error_page: `curl -H "Host: jump.com" 192.168.64.2:30080/blahblah`
 
 ## Ref
-- https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts
 - https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms
 

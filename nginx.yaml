@@ -17,6 +17,33 @@ spec:
       containers:
       - image: nginx:1.20.2
         name: nginx
+        volumeMounts:
+        - name: nginxconf
+          mountPath: /etc/nginx/conf.d
+        - name: jumphtmls
+          mountPath: /usr/share/nginx/html/jump
+      volumes:
+      - name: nginxconf
+        configMap:
+          name: nginxconf
+      - name: jumphtmls
+        configMap:
+          name: jumphtmls
+          items:
+          - key: index.html
+            path: index.html
+          - key: index_fallback.html
+            path: fallback/index.html
+          - key: index_another_fallback.html
+            path: another/fallback/index.html
+          - key: rewrited.html
+            path: rewrited.html
+          - key: index_rewrite.html
+            path: rewrited/index.html
+          - key: whoops.html
+            path: fallback/whoops.html
+          - key: another_whoops.html
+            path: another/fallback/index.html
 ---
 apiVersion: v1
 kind: Service
